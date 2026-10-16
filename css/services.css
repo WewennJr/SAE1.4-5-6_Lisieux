@@ -1,0 +1,60 @@
+.service {
+  width: 100%;
+  height: 200px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  color: white;
+  transition: height 0.3s ease;
+  cursor: pointer;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  .service img {
+    margin: 15px;
+  }
+}
+
+.service img {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.service p, .service h2 {
+  font-size: 1.2em;
+  max-width: 400px;
+  font-weight: bold;
+  color: var(--bs-btn-bg-lisieux);
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.service:hover {
+  height: 400px;
+}
+
+.nomad {
+  background-image: url("../images/backgrounds/nomad.png");
+}
+
+.astrobus {
+  background-image: url("../images/backgrounds/astrobus.png");
+}
+
+.covoiturage {
+  background-image: url("../images/backgrounds/covoiturage.png");
+}

@@ -1,0 +1,58 @@
+main {
+  background-image: url("../images/backgrounds/chateau_lisieux_haut.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 8em;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+[href] {
+  background-image: none !important;
+}
+
+.compte-title {
+  text-align: center !important;
+}
+
+.col-md-4 {
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 18rem;
+  margin-top: 0%;
+}
+
+.mcompte-change {
+  margin: 1em;
+}
+
+.fr-connect-group {
+  padding-top: 4%;
+}
+
+.connect-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .connect-btn {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .border {
+    width: 90%;
+  }
+  main {
+    padding: 2em;
+  }
+}
+
+.border {
+  background-color: white;
+  border-radius: 1em;
+  padding: 2em;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}

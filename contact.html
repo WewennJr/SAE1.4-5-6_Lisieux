@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="icon" type="image/png" href="images/logos/lisieuxnormandie.png">
+  <meta name="author" content="Lisieux Normandie Agglomération">
+  <meta name="description"
+    content="Site d'information pour le Plan de Déplacement Urbains de la communauté de communes Lisieux Normandie Agglomération">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/presentation.css">
+</head>
+
+<body class="body_fond">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-lisieux">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logos/lisieuxnormandie.png" alt="Logo" width="75" height="75" class="navbar-brand">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="d-flex justify-content-between w-100">
+            <ul class="navbar-nav d-flex align-items-center">
+              <li class="nav-item">
+                <a class="navbar-brand" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="actu.html">Actualités</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-brand fw-600" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Informations
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="presentation_communaute.html">La communauté de communes</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="presentation_etude.html">L'étude réalisée</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="transistionecologique.html">Transition écologique</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="services.html">Services</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button class="btn btn-primary btn-lisieux connexion" onclick="location.href='connexion.html'">
+                  Connexion
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="text-white">Communauté de communes de Lisieux</h1>
+    <div class="d-flex justify-content-center my-4 case_presentation">
+      <div class="row align-items-center">
+        <p class="text-white">
+          <i class="fa-regular fa-envelope"></i><a href="mailto:secretariat@agglo-lisieux.fr" class="lien_contact"
+            target="_blank">
+            Envoyer un mail
+          </a>
+        </p>
+
+        <p class="text-white">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2609.8662782855904!2d0.22229441159862642!3d49.14616328029314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e1c442ad00468b%3A0x418b8f746f6e8c4b!2sCommunaut%C3%A9%20d&#39;Agglom%C3%A9ration%20Lisieux%20Normandie!5e0!3m2!1sfr!2sfr!4v1764771561256!5m2!1sfr!2sfr"
+            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <br>
+          Nous envoyer une lettre : 11 place François Mitterrand CS 26020,
+          14106 Lisieux cedex
+        </p>
+        <p class="text-white">
+          <i class="fa-solid fa-phone"></i> Notre téléphone : 02.31.61.66.00
+        </p>
+      </div>
+    </div>
+    <br>
+  </main>
+
+  <footer class="bg-lisieux d-flex justify-content-center align-items-center w-100 footer_presentation">
+    <div class="w-100 p-3 mt-4 d-flex align-items-center justify-content-center align-self-center">
+      <img src="images/logos/lisieuxnormandie_noir.png" alt="Logo" class="d-inline-block align-text-top footer-logo">
+      <div class="row justify-content-center w-100 container footer-content">
+        <div class="col-3">
+          <p id="footer-text">
+            &copy; Communauté d'Agglomération de Lisieux Normandie -
+            <span id="annee"></span>
+          </p>
+          <p>FAVEROULT Hugo - TD2.1</p>
+        </div>
+        <div class="col vdivider"></div>
+        <div class="col-3 d-flex flex-column footer-links">
+          <a class="mb-2 d-block" href="plan.html">Plan du site <i class="fa-solid fa-square-arrow-up-right"></i></a>
+          <a class="mb-2 d-block" href="legacy.html">Mentions légales <i
+              class="fa-solid fa-square-arrow-up-right"></i></a>
+          <a class="d-block" href="contact.html">Contact <i class="fa-solid fa-square-arrow-up-right"></i></a>
+        </div>
+        <div class="col vdivider"></div>
+        <div class="col-4 d-flex flex-column contact">
+          <h5>Communauté d'Agglomération</h5>
+          <p>11 place François Mitterrand CS 26020</p>
+          <p>14106 Lisieux cedex</p>
+          <p>Tél. 02 31 61 66 00</p>
+          <p>secretariat@agglo-lisieux.fr</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="javascript/main.js"></script>
+</body>
+
+</html>

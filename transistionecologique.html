@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition Écologique</title>
+  <link rel="icon" type="image/png" href="images/logos/lisieuxnormandie.png">
+  <meta name="author" content="Lisieux Normandie Agglomération">
+  <meta name="description"
+    content="Site d'information pour le Plan de Déplacement Urbains de la communauté de communes Lisieux Normandie Agglomération">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-lisieux">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logos/lisieuxnormandie.png" alt="Logo" width="75" height="75" class="navbar-brand">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="d-flex justify-content-between w-100">
+            <ul class="navbar-nav d-flex align-items-center">
+              <li class="nav-item">
+                <a class="navbar-brand" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="actu.html">Actualités</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-brand fw-600 active" href="#" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Informations
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="presentation_communaute.html">La communauté de communes</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="presentation_etude.html">L'étude réalisée</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="transistionecologique.html">Transition écologique</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="services.html">Services</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button class="btn btn-primary btn-lisieux connexion" onclick="location.href='connexion.html'">
+                  Connexion
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="index-main">
+    <div class="index-principal-presentation d-flex flex-column justify-content-center align-items-center text-center">
+      <h1 class="text-center">Communauté de communes de Lisieux</h1>
+      <h2 class="text-center">
+        Informations supplémentaires : enjeux écologiques et énergétiques
+      </h2>
+      <p class="mt-5 text-center bg-textonmain montserrat-600">
+        Sur cette page vous allez pouvoir retrouver des informations
+        supplémentaires sur les enjeux écologiques et énergétiques liés au
+        Plan de Déplacement Urbain de la communauté de communes de Lisieux
+        Normandie Agglomération.
+      </p>
+    </div>
+
+    <div class="news pb-5 d-flex flex-column justify-content-center align-items-center">
+      <div class="d-flex w-75 splitter justify-content-center align-items-center gap-3">
+        <div class="d-flex gap-4 flex-wrap justify-content-center">
+          <div class="website-card mt-5">
+            <div class="card-body">
+              <h5 class="card-title">
+                Qu'est-ce que la transition énergétique et écologique ?
+              </h5>
+              <p class="card-text">
+                La transition écologique et la transition énergétique sont
+                deux éléments distincts, la transition écologique est
+                l'ensemble des mesures prises pour limiter l'impact des
+                activités de l'Homme sur l'environnement. Elle vise à repenser
+                nos modes de vie vers un nouveau mode de vie, plus durable
+                garantissant sa durabilité dans un monde en changement
+                permannant. La transition énergétique, elle est un élément de
+                la transition écologique. Elle vise à limiter le réchauffement
+                climatique via différents biais comme l'électrification, la
+                décarbonification, ...
+              </p>
+              <a href="https://mission-transition-ecologique.beta.gouv.fr/" target="_blank"
+                class="btn btn-primary btn-lisieux-darker">Visiter le site de l'État
+                <i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-4 flex-wrap justify-content-center">
+          <div class="website-card mt-5">
+            <div class="card-body">
+              <h5 class="card-title">Que disent les chiffres ?</h5>
+              <p class="card-text">
+                L'activité totale du transport de voyageurs représente 1033
+                milliards de voyageurs-kilomètres en 2023. Le transport
+                intérieur de voyageurs est toujours largement dominé par le
+                transport individuel en véhicules particuliers qui en
+                représente 82 %, une part en diminution de 1 point par rapport
+                à 2022. La part des transports ferrés est de 11 % et celle des
+                transports collectifs routiers est de 5 %. Quant au transport
+                aérien, il représente un peu plus de 1 % du transport
+                intérieur de voyageurs.
+              </p>
+              <a href="https://www.statistiques.developpement-durable.gouv.fr/transport-de-voyageurs-selon-les-modes?rubrique=60"
+                target="_blank" class="btn btn-primary btn-lisieux-darker">Voir sur developpement-durable.gouv.fr
+                <i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex w-75 splitter justify-content-center align-items-center gap-3">
+        <div class="d-flex gap-4 flex-wrap justify-content-center">
+          <div class="website-card mt-5">
+            <div class="card-body">
+              <h5 class="card-title">Quel rôle joue l'État dans cela ?</h5>
+              <p class="card-text">
+                Un employeur peut prendre en charge les frais de transport
+                personnels de ses salariés lors de leurs trajets
+                domicile-travail s'ils utilisent un moyen de transport
+                alternatif. Cette prise en charge n'est pas obligatoire. Elle
+                prend la forme d'un forfait mobilités durables (FMD).
+                Lorsqu'elle est mise en place, elle peut être exonérée de
+                cotisations sociales. Le forfait mobilités durables peut être
+                versé par l'intermédiaire de titres-mobilité.
+              </p>
+              <a href="https://mission-transition-ecologique.beta.gouv.fr/" target="_blank"
+                class="btn btn-primary btn-lisieux-darker">Visiter le site de l'État
+                <i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-4 flex-wrap justify-content-center">
+          <div class="website-card mt-5">
+            <div class="card-body">
+              <h5 class="card-title">La mobilité en Normandie</h5>
+              <p class="card-text">
+                La mobilité en Normandie est structurée autour d'un réseau
+                intégré appelé Nomad, qui regroupe tous les transports
+                régionaux non urbains et scolaires depuis le 1er janvier 2020,
+                incluant les trains, les cars interurbains, le transport à la
+                demande et le covoiturage. La Région Normandie est l'autorité
+                organisatrice de la mobilité régionale, responsable de la
+                gestion de 130 lignes routières interurbaines, du transport
+                scolaire hors agglomérations et du transport à la demande.
+                Elle assure également la maîtrise d'ouvrage des lignes
+                ferroviaires de passagers, dont les trains Intercités
+                Paris-Caen-Cherbourg/Trouville-Deauville, Paris-Rouen-Le
+                Havre, Paris-Granville, Paris-Evreux-Serquigny et Caen-Le
+                Mans-Tours.
+              </p>
+              <a href="https://www.normandie.developpement-durable.gouv.fr/observatoire-social-des-transports-edition-2025-a3415.html?lang=fr"
+                target="_blank" class="btn btn-primary btn-lisieux-darker">Voir sur le site le site de la DREAL
+                Normandie
+                <i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-lisieux d-flex justify-content-center align-items-center w-100">
+    <div class="w-100 p-3 mt-4 d-flex align-items-center justify-content-center align-self-center">
+      <img src="images/logos/lisieuxnormandie_noir.png" alt="Logo" class="d-inline-block align-text-top footer-logo">
+      <div class="row justify-content-center w-100 container footer-content">
+        <div class="col-3">
+          <p id="footer-text">
+            &copy; Communauté d'Agglomération de Lisieux Normandie -
+            <span id="annee"></span>
+          </p>
+          <p>DUTEURTRE Gabriel - TD2.1</p>
+        </div>
+        <div class="col vdivider"></div>
+        <div class="col-3 row footer-links">
+          <a href="plan.html">Plan du site <i class="fa-solid fa-square-arrow-up-right"></i></a>
+          <a href="legal.html">Mentions légales <i class="fa-solid fa-square-arrow-up-right"></i></a>
+          <a href="contact.html">Contact <i class="fa-solid fa-square-arrow-up-right"></i></a>
+        </div>
+        <div class="col vdivider"></div>
+        <div class="col-4 d-flex flex-column contact">
+          <h5>Communauté d'Agglomération</h5>
+          <p>11 place François Mitterrand CS 26020</p>
+          <p>14106 Lisieux cedex</p>
+          <p>Tél. 02 31 61 66 00</p>
+          <p>secretariat@agglo-lisieux.fr</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script src="javascript/main.js"></script>
+  <script src="javascript/index.js"></script>
+</body>
+
+</html>

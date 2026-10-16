@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="icon" type="image/png" href="images/logos/lisieuxnormandie.png">
+  <meta name="author" content="Lisieux Normandie Agglomération">
+  <meta name="description"
+    content="Site d'information pour le Plan de Déplacement Urbains de la communauté de communes Lisieux Normandie Agglomération">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-lisieux">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logos/lisieuxnormandie.png" alt="Logo" width="75" height="75" class="navbar-brand">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="d-flex justify-content-between w-100">
+            <ul class="navbar-nav d-flex align-items-center">
+              <li class="nav-item">
+                <a class="navbar-brand active" href="index.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="navbar-brand" href="actu.html">Actualités</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-brand fw-600" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Informations
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="presentation_communaute.html">La communauté de communes</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="presentation_etude.html">L'étude réalisée</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="transistionecologique.html">Transition écologique</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="services.html">Services</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button class="btn btn-primary btn-lisieux connexion" onclick="location.href='connexion.html'">
+                  Connexion
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="index-main">
+    <div class="index-principal-presentation">
+      <h1 class="text-center">Communauté de communes de Lisieux</h1>
+      <div class="d-flex justify-content-center align-items-center flex-column position-relative">
+        <div class="d-flex gap-4 flex-wrap justify-content-center">
+          <div class="website-card mt-5 w-50">
+            <div class="card-body">
+              <h5 class="card-title">
+                Bienvenue notre site pour le Plan de Déplacement Urbain
+              </h5>
+              <p class="card-text">
+                Découvrez les initiatives et les actions mises en place par la
+                Communauté de communes de Lisieux Normandie pour promouvoir
+                des modes de transport durables et améliorer la mobilité
+                urbaine.
+              </p>
+              <a href="presentation_communaute.html" class="btn btn-primary btn-lisieux-darker">En savoir plus <i
+                  class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="interest-points">
+      <h2 class="text-center mb-4">Lieux à visiter</h2>
+      <p>Cliquez sur un lieu de la carte pour le découvrir</p>
+      <div id="map"></div>
+      <div id="carrousel" class="carousel slide mt-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="images/backgrounds/basilique.png" class="d-block img-carroussel w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Basilique de Lisieux</h5>
+              <p class="p-1 bg-secondary rounded">
+                La cathédrale Saint-Pierre de Lisieux est une cathédrale
+                catholique romaine de style gothique normand, située à Lisieux
+                dans le Calvados, qui était l'église-mère du diocèse de
+                Lisieux avant son intégration au diocèse de Bayeux et Lisieux.
+                L'édifice est classé au titre des monuments historiques par
+                liste de 1840.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="images/backgrounds/cathedrale.png" class="d-block img-carroussel w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Cathédrale Saint-Pierre de Lisieux</h5>
+              <p class="p-1 bg-secondary rounded">
+                La cathédrale Saint-Pierre de Lisieux est une cathédrale
+                catholique romaine de style gothique normand, située à Lisieux
+                dans le Calvados, qui était l'église-mère du diocèse de
+                Lisieux avant son intégration au diocèse de Bayeux et Lisieux.
+                L'édifice est classé au titre des monuments historiques par
+                liste de 1840
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/backgrounds/carmel.png" class="d-block img-carroussel w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Carmel de Lisieux</p>
+              <p class="p-1 bg-secondary rounded">
+                Le carmel de Lisieux est un carmel fondé en 1838 par l'abbé
+                Pierre Sauvage dans la ville de Lisieux, en France. C'est dans
+                ce monastère que sœur Thérèse de l'Enfant-Jésus et de la
+                Sainte-Face, canonisée en 1925 sous le nom de sainte Thérèse
+                de Lisieux effectua sa vie religieuse, de 1888 à sa mort, en
+                1897.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="news pb-5 splitter d-flex flex-column align-items-center">
+      <div class="d-flex justify-content-center align-items-center flex-row gap-5 w-75">
+        <div class="d-flex gap-4 flex-wrap justify-content-center">
+          <div class="website-card mt-5">
+            <div class="card-body">
+              <h5 class="card-title">Dernière actualité des mobilités</h5>
+              <p class="card-text">
+                La communauté d'agglomération Lisieux Normandie vient de lancer
+                une vaste étude visant à repenser l'organisation de son réseau
+                de transports publics pour les dix prochaines années. Face au
+                vieillissement des conducteurs, à la hausse des coûts du service
+                et à l'évolution des besoins de la population, l'objectif est de
+                proposer un réseau plus flexible, durable et inclusif.
+              </p>
+              <a href="actu.html" class="btn btn-primary btn-lisieux-darker">Accéder à l'actualité
+                <i class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex gap-4 flex-wrap justify-content-center">
+          <div class="website-card mt-5">
+            <div class="card-body">
+              <h5 class="card-title">Dernière actualité écologique</h5>
+              <p class="card-text">
+                La crise énergétique des dernières années a renforcé la
+                nécessité d'accélérer la transition écologique dans les
+                territoires. Lisieux Normandie n'échappe pas à cette réalité :
+                hausse des prix du carburant, difficultés de chauffage, et
+                besoins croissants en alternatives économiques et durables.
+              </p>
+              <a href="ac.html" class="btn btn-primary btn-lisieux-darker">Accéder à l'actualité <i
+                  class="fa-solid fa-square-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-lisieux d-flex justify-content-center align-items-center w-100">
+    <div class="w-100 p-3 mt-4 d-flex align-items-center justify-content-center align-self-center">
+      <img src="images/logos/lisieuxnormandie_noir.png" alt="Logo" class="d-inline-block align-text-top footer-logo">
+      <div class="row justify-content-center w-100 container footer-content">
+        <div class="col-3">
+          <p id="footer-text">
+            &copy; Communauté d'Agglomération de Lisieux Normandie -
+            <span id="annee"></span>
+          </p>
+          <p>DUTEURTRE Gabriel - TD2.1</p>
+        </div>
+        <div class="col vdivider"></div>
+        <div class="col-3 row footer-links">
+          <a href="plan.html">Plan du site <i class="fa-solid fa-square-arrow-up-right"></i></a>
+          <a href="legal.html">Mentions légales <i class="fa-solid fa-square-arrow-up-right"></i></a>
+          <a href="contact.html">Contact <i class="fa-solid fa-square-arrow-up-right"></i></a>
+        </div>
+        <div class="col vdivider"></div>
+        <div class="col-4 d-flex flex-column contact">
+          <h5>Communauté d'Agglomération</h5>
+          <p>11 place François Mitterrand CS 26020</p>
+          <p>14106 Lisieux cedex</p>
+          <p>Tél. 02 31 61 66 00</p>
+          <p>secretariat@agglo-lisieux.fr</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <script src="javascript/main.js"></script>
+  <script src="javascript/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.body_fond{
+    background-image: url('../images/backgrounds/fond_presentation.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  padding-top:50px;
+  text-align: center;
+}
+
+
+.case_presentation {
+  background-color: #e74e0f99;
+  border: 1px solid #e74e0f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.lien_contact {
+  color: #ffffff !important;
+}
